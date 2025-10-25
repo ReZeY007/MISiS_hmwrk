@@ -3,11 +3,14 @@ from math import gcd
 class Rational:
 
     def __init__ (self, num, denum):
-        self.num = num
         if denum == 0:
             raise ValueError("Zero division")
-        
-        self.denum = denum
+        elif denum < 0:
+            self.num = -num
+            self.denum = -denum
+        else:
+            self.num = num
+            self.denum = denum
         
 
     @staticmethod
