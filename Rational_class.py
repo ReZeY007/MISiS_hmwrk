@@ -4,7 +4,7 @@ class Rational:
 
     def __init__ (self, num, denum):
         if denum == 0:
-            raise ArithmeticError("Zero division")
+            raise ZeroDivisionError("Zero division")
         elif denum < 0:
             self.num = -num
             self.denum = -denum
@@ -92,7 +92,7 @@ class Rational:
     def __truediv__(self, other):
         if type(other) == Rational:
             if other.num == 0:
-                raise ArithmeticError("Zero division")
+                raise ZeroDivisionError("Zero division")
 
             num = self.num * other.denum
             denum = self.denum * other.num
@@ -100,7 +100,7 @@ class Rational:
             return Rational(num, denum)
         elif type(other) == int:
             if other == 0:
-                raise ArithmeticError("Zero division")
+                raise ZeroDivisionError("Zero division")
 
             return Rational(self.num, self.denum * other)        
 
