@@ -30,8 +30,8 @@ class Wiki():
         return article_text
     
     @staticmethod
-    def search_articles(query):
-        url = Wiki.__baseURL + f'action=query&list=search&srsearch={query}&format=json'
+    def search_articles(query, count = 5):
+        url = Wiki.__baseURL + f'action=query&list=search&srsearch={query}&srlimit={count}&format=json'
 
         response = requests.get(url, headers=Wiki.__baseURLheaders)
         response.raise_for_status()

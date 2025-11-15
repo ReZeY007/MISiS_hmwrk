@@ -13,13 +13,13 @@ async def get_article(article_name):
 
 
 @app.get("/search/{query}")
-async def search_articles(query):
-    articles = Wiki.search_articles(query)
+async def search_articles(query: str, count: int = 5):
+    articles = Wiki.search_articles(query, count)
 
     return articles
 
 
 client = TestClient(app)
 
-print(client.get('/article/eart').json())
-print(client.get('/search/earth').json())
+print(client.get('/article/earth').json())
+print(client.get('/search/earth?count=1').json())
