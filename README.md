@@ -2,4 +2,4 @@
 
 [Первая домашка с гитом](https://github.com/ReZeY007/MISiS)
 
-[Проект](https://github.com/ReZeY007/news-analyzer-bot)
+[Проект](https://github.com/ReZeY007/news-analyzer-bot) (тема, актуальность и т. д. лежат в файле "Бот-анализатор новостного шума.md")
